@@ -141,7 +141,7 @@ function App() {
     try {
 
       await window.keplr.experimentalSuggestChain({
-        chainId: "party",
+        chainId: "partychain",
         chainName: "PartyChain",
         chainSymbolImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/colosseum/chain.png",
         rpc: "http://0.0.0.0:26657",
@@ -159,16 +159,16 @@ function App() {
         },
         currencies: [
           {
-            coinDenom: "GRM",
-            coinMinimalDenom: "ugrm",
+            coinDenom: "STAKE",
+            coinMinimalDenom: "ustake",
             coinDecimals: 6,
             coinGeckoId: "partychain",
           },
         ],
         feeCurrencies: [
           {
-            coinDenom: "GRM",
-            coinMinimalDenom: "ugrm",
+            coinDenom: "STAKE",
+            coinMinimalDenom: "ustake",
             coinDecimals: 6,
             coinGeckoId: "partychain",
             gasPriceStep: {
@@ -179,8 +179,8 @@ function App() {
           }
         ],
         stakeCurrency: {
-          coinDenom: "GRM",
-          coinMinimalDenom: "ugrm",
+          coinDenom: "STAKE",
+          coinMinimalDenom: "ustake",
           coinDecimals: 6,
           coinGeckoId: "partychain",
         },
@@ -380,7 +380,7 @@ function App() {
 
 
   const getAddress = async () => {
-    const chainId = "party";
+    const chainId = "partychain";
     try {
       await window.keplr.enable(chainId);
       const offlineSigner = window.getOfflineSigner(chainId);

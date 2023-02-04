@@ -38,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@rollup/plugin-node-resolve": "^15.0.1"
   }
 }
